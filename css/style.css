@@ -14,26 +14,39 @@ a, button {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+}
+
 body{
     font-family: "PT Sans", sans-serif;
 }
 
 /* COMMON */
 .container {
-    width: 100%;
-    padding: 0px 10px;
+    width: 90%;
     margin: 0 auto;
 }
 
+
 .btn {
     border-radius: 20px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1em;
 }
 
 /* UTILITIES */
 
 :root {
     --blue-color: #0084fd;
+    --violet-color: #9792e4;
+    --blue-card-color: #b5ddff;
     --header-height: 5rem;
+    --gap-flex: 1.2em;
 }
 
 .flex {
@@ -44,12 +57,45 @@ body{
     justify-content: space-between;
 }
 
-.y-center {
+.column {
+    flex-direction: column;
+}
+
+.a-center {
     align-items: center;
 }
 
+.j-center {
+    justify-content: center;
+}
+
 .gap {
-    gap: 10px;
+    gap: var(--gap-flex);
+}
+
+.blue {
+    background-color: var(--blue-card-color) ;
+}
+
+.violet {
+    background-color: var(--violet-color);
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.pd-section {
+    padding: 2em 0;
+}
+/*=============
+ DEBUG 
+==============*/
+
+.blue-card .card {
+    height: 100px;
 }
 
 /* HEADER */
@@ -57,6 +103,11 @@ header {
     background-color: var(--blue-color);
     height: var(--header-height);
     color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
 }
 
 header nav {
@@ -68,14 +119,13 @@ header nav {
 }
 
 .nav-btn {
-    background-color: white;
     padding: 5px 10px;
     color: black;
 }
 
 @media screen and (min-width:992px) {
 
-    .container {
+    header .container {
         width: 80%;
         padding: 0;
     }
@@ -88,4 +138,72 @@ header nav {
         display: block;
     }
     
+}
+
+/* blue-card */
+
+.blue-card {
+    margin-top: var(--header-height);
+
+}
+
+@media screen and  (min-width: 768px) {
+
+    .blue-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .blue-card .card {
+        width: calc(100% / 3 - var(--gap-flex));
+    }
+
+    .blue-card .big-card {
+        width: calc(100% / 3 * 2 - var(--gap-flex));
+    }
+}
+
+/* strategic-planning */
+
+
+
+.strategic-planning .card-left img,
+.strategic-planning .card-left h2 {
+    padding: 1.2em 0;
+}
+
+.strategic-planning .white {
+    text-align: center;
+}
+
+.strategic-planning .white  h4 {
+    padding: 1.2em 0;
+}
+
+.strategic-planning .white  img {
+    width: 50%;
+}
+
+.strategic-planning .icon {
+    margin: 20px 0;
+    width: 1.5em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: black;
+    background-color: var(--violet-color);
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    .strategic-planning div.container {
+        flex-direction: row;
+        align-items: end;
+        width: 70%;
+    }
+
+    .strategic-planning div.container div:not(.icon) {
+        width: 50%;
+    }
+
 }
