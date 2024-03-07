@@ -172,6 +172,10 @@ header nav {
     padding: 1.2em 0;
 }
 
+.strategic-planning .card-left .img {
+    text-align: center;
+}
+
 .strategic-planning .white {
     text-align: center;
 }
@@ -180,12 +184,9 @@ header nav {
     padding: 1.2em 0;
 }
 
-.strategic-planning .white  img {
-    width: 50%;
-}
 
 .strategic-planning .icon {
-    margin: 20px 0;
+    margin-top: 20px;
     width: 1.5em;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -200,10 +201,58 @@ header nav {
         flex-direction: row;
         align-items: end;
         width: 70%;
+        gap: 40px;
     }
 
-    .strategic-planning div.container div:not(.icon) {
+    .strategic-planning div.container div:not(.icon, .img) {
         width: 50%;
     }
 
+    .strategic-planning .white  img {
+        width: 70%;
+    }
+
+}
+
+/* testimonials */
+
+.photo {
+    max-width: 70%; 
+}
+
+.photo img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.testimonial-card{
+    text-align: center;
+}
+
+.testimonials .card .description {
+    text-align: center;
+}
+
+.description p {
+    padding: 20px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonials .card {
+        flex-direction: row;
+    } 
+    
+    .testimonials .description {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .testimonials {
+        width: 80%;
+    }
 }
