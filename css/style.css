@@ -155,7 +155,7 @@ header nav {
     }
     
     .blue-card .card {
-        width: calc(100% / 3 - var(--gap-flex));
+        width: calc(100% / 3 - var(--gap-flex) * 2);
     }
 
     .blue-card .big-card {
@@ -254,5 +254,27 @@ header nav {
 @media screen and (min-width: 992px) {
     .testimonials {
         width: 80%;
+    }
+}
+
+/* benefits */
+
+@media screen and (min-width: 768px) {
+
+
+    .benefits .card {
+        width: calc(100% / 2 - var(--gap-flex) )
+    }
+
+    .benefits .flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .benefits .card {
+        width: calc(100% / 3 - var(--gap-flex) * 2)
     }
 }
