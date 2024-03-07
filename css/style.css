@@ -47,6 +47,7 @@ body{
     --blue-card-color: #b5ddff;
     --header-height: 5rem;
     --gap-flex: 1.2em;
+    --container-width: 80%;
 }
 
 .flex {
@@ -126,7 +127,7 @@ header nav {
 @media screen and (min-width:992px) {
 
     header .container {
-        width: 80%;
+        width: var(--container-width);
         padding: 0;
     }
 
@@ -276,5 +277,29 @@ header nav {
 
     .benefits .card {
         width: calc(100% / 3 - var(--gap-flex) * 2)
+    }
+
+    .benefits .container {
+        width: 80%;
+    }
+}
+
+/* about-us */
+
+.about-us h2, .about-us p {
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .about-us .container {
+        width: 85%;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-us .container {
+        width: 75%;
+        flex-direction: row;
     }
 }
