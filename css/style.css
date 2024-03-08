@@ -219,7 +219,7 @@ header nav {
     }
     
     .blue-card .card {
-        width: calc(100% / 3 - var(--gap-flex) *2 / 3);
+        width: calc(100% / 3 - var(--gap-flex) * 2 / 3);
     }
 
     .blue-card .big-card {
