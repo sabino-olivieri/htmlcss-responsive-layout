@@ -89,7 +89,10 @@ body{
     color: black;
 }
 
-.black {}
+.black {
+    background-color: #333333;
+    color: white;
+}
 
 .pd-section {
     padding: 2em 0;
@@ -306,6 +309,34 @@ header nav {
 
     .get-started div.text-center {
         width: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+
+    .get-started h3 {
+        width: 45%;
+    }
+
+    .get-started div.text-center {
+        width: 40%;
+    }
+    
+}
+
+/* footer */
+
+@media screen and (min-width: 768px) {
+    footer .container {
+        width: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    footer .container {
+        width: 40%;
     }
     
 }
