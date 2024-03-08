@@ -22,6 +22,10 @@ body{
     font-family: "PT Sans", sans-serif;
 }
 
+p, span {
+    line-height: 1.6em;
+}
+
 /* COMMON */
 .container {
     width: 90%;
@@ -31,11 +35,18 @@ body{
 
 .btn {
     border-radius: 20px;
+}
+
+.btn-small {
     padding: 10px 20px;
 }
 
+.btn-large {
+    padding: 10px 40px;
+    letter-spacing: 0.2em;
+}
+
 .card {
-    border: 1px solid black;
     border-radius: 25px;
     padding: 1em;
 }
@@ -94,8 +105,20 @@ body{
     color: white;
 }
 
+.tx-blue {
+    color: var(--blue-color);
+}
+
+.tx-white {
+    color: white;
+}
+
 .pd-section {
     padding: 2em 0;
+}
+
+.pd-text {
+    padding: 1.4em 0;
 }
 
 .text-center {
@@ -105,9 +128,6 @@ body{
  DEBUG 
 ==============*/
 
-.blue-card .card {
-    height: 100px;
-}
 
 /* HEADER */
 header {
@@ -158,6 +178,26 @@ header nav {
 
 }
 
+.blue-card .col span {
+    background-color: var(--blue-color);
+    font-weight: bold;
+}
+
+.blue-card .big-card {
+    padding-bottom: 0;
+    gap: calc(var(--gap-flex) * 2);
+}
+
+.blue-card .big-card img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.blue-card .big-icon i {
+    font-size: 5em;
+}
+
+
 @media screen and  (min-width: 768px) {
 
     .blue-card {
@@ -171,6 +211,30 @@ header nav {
 
     .blue-card .big-card {
         width: calc(100% / 3 * 2 - var(--gap-flex));
+
+    }
+
+    .blue-card .big-card img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .blue-card .big-card {
+        flex-direction: row;
+    }
+    
+    .blue-card .big-card img {
+        padding-top: calc(var(--gap-flex) * 2);
+    }
+
+    .blue-card .big-card .col:first-child {
+        width: 60%;
+    }
+
+    .blue-card .big-card .col:last-child {
+        width: 40%;
     }
 }
 
