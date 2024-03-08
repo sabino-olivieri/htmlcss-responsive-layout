@@ -39,12 +39,12 @@ p, span {
 }
 
 .btn-small {
-    padding: 10px 20px;
+    padding: 5px 20px;
 }
 
 .btn-large {
     padding: 10px 40px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.2rem;
 }
 
 .card {
@@ -162,10 +162,7 @@ header nav {
     padding: 10px;
 }
 
-.nav-btn {
-    padding: 5px 10px;
-    color: black;
-}
+
 
 @media screen and (min-width:992px) {
 
@@ -294,14 +291,8 @@ header nav {
 
 /* testimonials */
 
-
-.photo {
-    max-width: 70%; 
-}
-
-.photo img {
-    width: 100%;
-    max-width: 300px;
+.testimonials .photo img {
+    max-width: 60%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
@@ -323,6 +314,10 @@ header nav {
     
     .testimonials .description {
         padding: 0px 20px;
+    }
+
+    .testimonials .photo img {
+        max-width: 100%;
     }
 }
 
@@ -370,14 +365,55 @@ header nav {
 
 /* about-us */
 
-.about-us h2, .about-us p {
-    padding-bottom: 20px;
+.about-us span i {
+    padding-right: 0.5em;
+}
+
+.about-us .photo {
+    position: relative;
+}
+
+.about-us .photo img {
+    max-width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.about-us .photo i {
+    font-size: 15vw;
+    position: absolute;
+    top: 0;
+    left: 35vw;
+    z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
     .about-us .container {
         width: 85%;
         flex-direction: row;
+    }
+
+    .about-us .col:first-child {
+        width: calc(70% - var(--gap-flex));
+    }
+
+    .about-us .col:last-child {
+        width: calc(30% - var(--gap-flex));
+    }
+
+    .about-us .photo{
+        text-align: center;
+    }
+
+    .about-us .photo img {
+        max-width: 100%;
+    }
+
+    .about-us .photo i {
+        font-size: 10vw;
+        left: 18vw;
     }
 }
 
@@ -386,6 +422,12 @@ header nav {
         width: 75%;
         flex-direction: row;
     }
+
+    .about-us .photo i {
+        font-size: 8vw;
+        left: 16vw;
+    }
+
 }
 
 /* get-started */
