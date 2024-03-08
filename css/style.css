@@ -31,6 +31,7 @@ body{
 
 .btn {
     border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .card {
@@ -88,8 +89,14 @@ body{
     color: black;
 }
 
+.black {}
+
 .pd-section {
     padding: 2em 0;
+}
+
+.text-center {
+    text-align: center;
 }
 /*=============
  DEBUG 
@@ -173,14 +180,6 @@ header nav {
     padding: 1.2em 0;
 }
 
-.strategic-planning .card-left .img {
-    text-align: center;
-}
-
-.strategic-planning .white {
-    text-align: center;
-}
-
 .strategic-planning .white  h4 {
     padding: 1.2em 0;
 }
@@ -230,13 +229,6 @@ header nav {
     border-radius: 50%;
 }
 
-.testimonial-card{
-    text-align: center;
-}
-
-.testimonials .card .description {
-    text-align: center;
-}
 
 .description p {
     padding: 20px 0;
@@ -302,4 +294,18 @@ header nav {
         width: 75%;
         flex-direction: row;
     }
+}
+
+/* get-started */
+
+@media screen and (min-width: 768px) {
+
+    .get-started h3 {
+        width: 65%;
+    }
+
+    .get-started div.text-center {
+        width: 60%;
+    }
+    
 }
