@@ -109,12 +109,16 @@ p, span {
     color: var(--blue-color);
 }
 
+.tx-violet {
+    color: var(--violet-color);
+}
+
 .tx-white {
     color: white;
 }
 
 .pd-section {
-    padding: 2em 0;
+    padding: 4em 0;
 }
 
 .pd-text {
@@ -239,21 +243,8 @@ header nav {
 }
 
 /* strategic-planning */
-
-
-
-.strategic-planning .card-left img,
-.strategic-planning .card-left h2 {
-    padding: 1.2em 0;
-}
-
-.strategic-planning .white  h4 {
-    padding: 1.2em 0;
-}
-
-
 .strategic-planning .icon {
-    margin-top: 20px;
+    margin-top: 1.2em;
     width: 1.5em;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -262,16 +253,27 @@ header nav {
     font-size: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+
+    .strategic-planning h2 {
+        font-size: 4rem;
+    }    
+}
+
 @media screen and (min-width: 992px) {
 
     .strategic-planning div.container {
         flex-direction: row;
         align-items: end;
         width: 70%;
-        gap: 40px;
+        gap: calc(var(--gap-flex) * 2);
     }
 
-    .strategic-planning div.container div:not(.icon, .img) {
+    .strategic-planning h2 {
+        font-size: 1.5rem;
+    }    
+
+    .strategic-planning .col {
         width: 50%;
     }
 
