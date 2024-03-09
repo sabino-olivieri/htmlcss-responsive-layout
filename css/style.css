@@ -200,23 +200,6 @@ header button:hover {
     color: white;
 }
 
-@media screen and (min-width:992px) {
-
-    header .container {
-        width: var(--container-width);
-        padding: 0;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
-    header nav {
-        display: block;
-    }
-    
-}
-
 /* blue-card */
 
 .blue-card {
@@ -238,6 +221,7 @@ header button:hover {
 }
 
 .blue-card .big-card img {
+    max-width: 300px;
     width: 100%;
 }
 
@@ -255,45 +239,7 @@ header button:hover {
     box-shadow: 5px 5px 0px var(--blue-color);
 }
 
-@media screen and  (min-width: 768px) {
 
-    .blue-card {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .blue-card .card {
-        width: calc(100% / 3 - var(--gap-flex) * 2 / 3);
-    }
-
-    .blue-card .big-card {
-        width: calc(100% / 3 * 2 - var(--gap-flex) / 2);
-
-    }
-
-    .blue-card .big-card img {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    
-    .blue-card .big-card {
-        flex-direction: row;
-    }
-    
-    .blue-card .big-card img {
-        padding-top: calc(var(--gap-flex) * 2);
-    }
-
-    .blue-card .big-card .col:first-child {
-        width: 60%;
-    }
-
-    .blue-card .big-card .col:last-child {
-        width: 40%;
-    }
-}
 
 /* strategic-planning */
 #strategic-planning .icon {
@@ -309,36 +255,6 @@ header button:hover {
 
 #strategic-planning .icon:hover {
     color: white;
-}
-
-@media screen and (min-width: 768px) {
-
-    #strategic-planning h2 {
-        font-size: 4rem;
-    }    
-}
-
-@media screen and (min-width: 992px) {
-
-    #strategic-planning div.container {
-        flex-direction: row;
-        align-items: end;
-        width: 70%;
-        gap: calc(var(--gap-flex) * 2);
-    }
-
-    #strategic-planning h2 {
-        font-size: 1.5rem;
-    }    
-
-    #strategic-planning .col {
-        width: 50%;
-    }
-
-    #strategic-planning .white  img {
-        width: 70%;
-    }
-
 }
 
 /* testimonials */
@@ -359,28 +275,9 @@ header button:hover {
     font-size: 1.5em;
 }
 
-@media screen and (min-width: 768px) {
-    #testimonials .card {
-        flex-direction: row;
-    } 
-    
-    #testimonials .description {
-        padding: 0px 20px;
-    }
-
-    #testimonials .photo img {
-        max-width: 70%;
-    }
-}
 
 @media screen and (min-width: 992px) {
-    #testimonials {
-        width: 80%;
-    }
 
-    #testimonials .card {
-        gap: calc(var(--gap-flex) * 2);
-    }
 }
 
 
@@ -399,29 +296,8 @@ header button:hover {
     font-size: 4rem;
 }
 
-@media screen and (min-width: 768px) {
 
 
-    #benefits .card {
-        width: calc(100% / 2 - var(--gap-flex) / 2)
-    }
-
-    #benefits .flex {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (min-width: 992px) {
-
-    #benefits .card {
-        width: calc(100% / 3 - var(--gap-flex) * 2 / 3)
-    }
-
-    #benefits .container {
-        width: 80%;
-    }
-}
 
 /* about-us */
 
@@ -449,50 +325,7 @@ header button:hover {
     z-index: 1;
 }
 
-
-@media screen and (min-width: 768px) {
-    #about-us .container {
-        width: 85%;
-        flex-direction: row;
-    }
-
-    #about-us .col:first-child {
-        width: calc(70% - var(--gap-flex));
-    }
-
-    #about-us .col:last-child {
-        width: calc(30% - var(--gap-flex));
-    }
-
-    #about-us .photo{
-        text-align: center;
-    }
-
-    #about-us .photo img {
-        max-width: 100%;
-    }
-
-    #about-us .photo i {
-        font-size: 10vw;
-        left: 75%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    #about-us .container {
-        width: 75%;
-        flex-direction: row;
-    }
-
-    #about-us .photo i {
-        font-size: clamp(80px, 8vw ,120px);
-    }
-
-}
-
 /* cta */
-
-
 
 .cta h2 {
     color: #FDC15F;
@@ -509,34 +342,4 @@ header button:hover {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
-
-    .cta .container {
-        width: 60%;
-    }
-    
-}
-
-@media screen and (min-width: 992px) {
-
-    .cta .container{
-        width: 40%;
-    }
-    
-}
-
 /* footer */
-
-@media screen and (min-width: 768px) {
-    footer .container {
-        width: 60%;
-    }
-    
-}
-
-@media screen and (min-width: 992px) {
-    footer .container {
-        width: 40%;
-    }
-    
-}

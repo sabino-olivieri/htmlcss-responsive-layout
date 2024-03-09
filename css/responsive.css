@@ -1,0 +1,184 @@
+/* TABLET */
+
+@media screen and  (min-width: 768px) {
+
+    /* LAYOUT */
+
+    .blue-card, 
+    #testimonials .card,
+    #benefits .flex,
+    #about-us .container {
+        flex-direction: row;
+    }
+        /* BLUE-CARD */
+
+    .blue-card,
+    #benefits .flex {
+        flex-wrap: wrap;
+    }
+    
+    .blue-card .card {
+        width: calc(100% / 3 - var(--gap-flex) * 2 / 3);
+    }
+
+    .blue-card .big-card {
+        width: calc(100% / 3 * 2 - var(--gap-flex) / 2);
+
+    }
+
+    .blue-card .big-card img {
+        width: 100%;
+    }
+
+        /* STRATEGIC-PLANNING */
+
+    #strategic-planning h2 {
+        font-size: 4rem;
+    }   
+
+        /* TESTIMONIALS */
+    
+    #testimonials .description {
+        padding: 0px 20px;
+    }
+
+    #testimonials .photo img {
+        max-width: 70%;
+    }
+
+        /* BENEFITS */
+
+    #benefits .card {
+        width: calc(100% / 2 - var(--gap-flex) / 2)
+    }
+
+    /* ABOUT-US */
+
+    #about-us .container {
+        width: 85%;
+    }
+
+    #about-us .col:first-child {
+        width: calc(70% - var(--gap-flex));
+    }
+
+    #about-us .col:last-child {
+        width: calc(30% - var(--gap-flex));
+    }
+
+    #about-us .photo{
+        text-align: center;
+    }
+
+    #about-us .photo img {
+        max-width: 100%;
+    }
+
+    #about-us .photo i {
+        font-size: 10vw;
+        left: 75%;
+    }
+
+    /* FOOTER */
+    /* CTA */
+
+    .cta .container, footer .container {
+        width: 60%;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width:992px) {
+
+    /* LAYOUT */
+
+    .blue-card .big-card,
+    #strategic-planning div.container {
+        flex-direction: row;
+    }
+
+        /* HEADER */
+
+    header .container {
+        width: var(--container-width);
+        padding: 0;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+    
+        /* BLUE-CARD */
+    
+    .blue-card .big-card img {
+        padding-top: calc(var(--gap-flex) * 2);
+    }
+
+    .blue-card .big-card .col:first-child {
+        width: 60%;
+    }
+
+    .blue-card .big-card .col:last-child {
+        width: 40%;
+    }
+
+         /* STRATEGIC-PLANNING */
+
+    #strategic-planning div.container {
+        align-items: end;
+        width: 70%;
+        gap: calc(var(--gap-flex) * 2);
+    }
+
+    #strategic-planning h2 {
+        font-size: 1.5rem;
+    }    
+
+    #strategic-planning .col {
+        width: 50%;
+    }
+
+    #strategic-planning .white  img {
+        width: 70%;
+    }
+
+        /* TESTIMONIALS */
+
+    #testimonials, #benefits .container {
+        width: 80%;
+    }
+
+    #testimonials .card {
+        gap: calc(var(--gap-flex) * 2);
+    }
+        
+    /* BENEFITS */
+
+    #benefits .card {
+        width: calc(100% / 3 - var(--gap-flex) * 2 / 3)
+    }
+
+    /* ABOUT-US */
+
+    #about-us .container {
+        width: 75%;
+    }
+
+    #about-us .photo i {
+        font-size: clamp(80px, 8vw ,120px);
+    }
+
+    /* FOOTER */
+    /* CTA */
+
+    .cta .container, footer .container{
+        width: 40%;
+    }
+    
+}
