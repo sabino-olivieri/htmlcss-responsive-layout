@@ -30,6 +30,7 @@ p, span {
 .container {
     width: 90%;
     margin: 0 auto;
+    max-width: 1100px;
 }
 
 
@@ -317,7 +318,7 @@ header nav {
     }
 
     .testimonials .photo img {
-        max-width: 100%;
+        max-width: 70%;
     }
 }
 
@@ -385,7 +386,7 @@ header nav {
     font-size: 15vw;
     position: absolute;
     top: 0;
-    left: 35vw;
+    left: 37%;
     z-index: 1;
 }
 
@@ -413,7 +414,7 @@ header nav {
 
     .about-us .photo i {
         font-size: 10vw;
-        left: 18vw;
+        left: 75%;
     }
 }
 
@@ -424,21 +425,33 @@ header nav {
     }
 
     .about-us .photo i {
-        font-size: 8vw;
-        left: 16vw;
+        font-size: clamp(80px, 8vw ,120px);
     }
 
 }
 
-/* get-started */
+/* cta */
+
+
+
+.cta h2 {
+    color: #FDC15F;
+    font-size: clamp(2rem, calc(5vw + 1rem), 10rem);
+}
+.cta .uppercase{
+    color: rgba(255, 255, 255, 0.54);
+}
+.cta .copy-boolean {
+    display: block;
+}
+
+.link {
+    text-decoration: underline;
+}
 
 @media screen and (min-width: 768px) {
 
-    .get-started h3 {
-        width: 65%;
-    }
-
-    .get-started div.text-center {
+    .cta .container {
         width: 60%;
     }
     
@@ -446,11 +459,7 @@ header nav {
 
 @media screen and (min-width: 992px) {
 
-    .get-started h3 {
-        width: 45%;
-    }
-
-    .get-started div.text-center {
+    .cta .container{
         width: 40%;
     }
     
