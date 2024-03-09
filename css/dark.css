@@ -1,0 +1,33 @@
+    body {
+      background-color: #222222;
+      color: #fff;
+      font-weight: bold;
+    }
+
+:root {
+    --blue-card-color: #00396f;
+    --blue-color: #000000;
+    --violet-color: #6863a3;
+}
+
+.white {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+#strategic-planning .img img {
+    filter: brightness(68.5%);
+}
+
+header nav button.btn {
+    background-color: var(--blue-card-color);
+}
+
+header nav button.btn:hover {
+    background-color: var(--violet-color)
+}
+
+.btn:not(header .btn, .blue-card .btn):hover {
+    background-color: var(--blue-card-color);
+    color: white;
+}
