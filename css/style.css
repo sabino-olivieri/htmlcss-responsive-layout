@@ -26,6 +26,10 @@ p, span {
     line-height: 1.6em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* COMMON */
 .container {
     width: 90%;
@@ -163,7 +167,38 @@ header nav {
     padding: 10px;
 }
 
+/* effects header */
 
+header li {
+    position: relative;
+    height: var(--header-height);
+}
+
+header li:not(.no-effects)::after { 
+    content: "";
+    height: 4px; 
+    left: 0; 
+    bottom: 0; 
+    width: 0px;  
+    position: absolute; 
+    z-index: -1;
+    transition: width 0.5s ease 0s; 
+}
+
+
+header li:hover:after { 
+    width: 100%;
+    background: white;
+}
+
+header button {
+    transition: 0.5s ease 0s; 
+}
+
+header button:hover {
+    background-color: var(--violet-color);
+    color: white;
+}
 
 @media screen and (min-width:992px) {
 
@@ -210,6 +245,15 @@ header nav {
     font-size: 5em;
 }
 
+/* effects blue-card */
+
+.blue-card .card {
+    transition: 0.5s ease 0s;
+}
+
+.blue-card .card:hover {
+    box-shadow: 5px 5px 0px var(--blue-color);
+}
 
 @media screen and  (min-width: 768px) {
 
@@ -252,7 +296,7 @@ header nav {
 }
 
 /* strategic-planning */
-.strategic-planning .icon {
+#strategic-planning .icon {
     margin-top: 1.2em;
     width: 1.5em;
     aspect-ratio: 1;
@@ -260,33 +304,38 @@ header nav {
     color: black;
     background-color: var(--violet-color);
     font-size: 2rem;
+    transition: 0.5s ease 0s;
+}
+
+#strategic-planning .icon:hover {
+    color: white;
 }
 
 @media screen and (min-width: 768px) {
 
-    .strategic-planning h2 {
+    #strategic-planning h2 {
         font-size: 4rem;
     }    
 }
 
 @media screen and (min-width: 992px) {
 
-    .strategic-planning div.container {
+    #strategic-planning div.container {
         flex-direction: row;
         align-items: end;
         width: 70%;
         gap: calc(var(--gap-flex) * 2);
     }
 
-    .strategic-planning h2 {
+    #strategic-planning h2 {
         font-size: 1.5rem;
     }    
 
-    .strategic-planning .col {
+    #strategic-planning .col {
         width: 50%;
     }
 
-    .strategic-planning .white  img {
+    #strategic-planning .white  img {
         width: 70%;
     }
 
@@ -294,14 +343,14 @@ header nav {
 
 /* testimonials */
 
-.testimonials .photo img {
+#testimonials .photo img {
     max-width: 60%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
 }
-.testimonials .description .uppercase {
+#testimonials .description .uppercase {
     display: inline-block;
 }
 
@@ -311,25 +360,25 @@ header nav {
 }
 
 @media screen and (min-width: 768px) {
-    .testimonials .card {
+    #testimonials .card {
         flex-direction: row;
     } 
     
-    .testimonials .description {
+    #testimonials .description {
         padding: 0px 20px;
     }
 
-    .testimonials .photo img {
+    #testimonials .photo img {
         max-width: 70%;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .testimonials {
+    #testimonials {
         width: 80%;
     }
 
-    .testimonials .card {
+    #testimonials .card {
         gap: calc(var(--gap-flex) * 2);
     }
 }
@@ -337,7 +386,15 @@ header nav {
 
 /* benefits */
 
-.benefits .numbers {
+.btn {
+    transition: 0.5s ease 0s; 
+}
+.btn:not(header .btn):hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+#benefits .numbers {
     display: inline-block;
     font-size: 4rem;
 }
@@ -345,11 +402,11 @@ header nav {
 @media screen and (min-width: 768px) {
 
 
-    .benefits .card {
+    #benefits .card {
         width: calc(100% / 2 - var(--gap-flex) / 2)
     }
 
-    .benefits .flex {
+    #benefits .flex {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -357,26 +414,26 @@ header nav {
 
 @media screen and (min-width: 992px) {
 
-    .benefits .card {
+    #benefits .card {
         width: calc(100% / 3 - var(--gap-flex) * 2 / 3)
     }
 
-    .benefits .container {
+    #benefits .container {
         width: 80%;
     }
 }
 
 /* about-us */
 
-.about-us span i {
+#about-us span i {
     padding-right: 0.5em;
 }
 
-.about-us .photo {
+#about-us .photo {
     position: relative;
 }
 
-.about-us .photo img {
+#about-us .photo img {
     max-width: 50%;
     aspect-ratio: 1;
     object-fit: cover;
@@ -384,7 +441,7 @@ header nav {
     border-radius: 50%;
 }
 
-.about-us .photo i {
+#about-us .photo i {
     font-size: 15vw;
     position: absolute;
     top: 0;
@@ -392,41 +449,42 @@ header nav {
     z-index: 1;
 }
 
+
 @media screen and (min-width: 768px) {
-    .about-us .container {
+    #about-us .container {
         width: 85%;
         flex-direction: row;
     }
 
-    .about-us .col:first-child {
+    #about-us .col:first-child {
         width: calc(70% - var(--gap-flex));
     }
 
-    .about-us .col:last-child {
+    #about-us .col:last-child {
         width: calc(30% - var(--gap-flex));
     }
 
-    .about-us .photo{
+    #about-us .photo{
         text-align: center;
     }
 
-    .about-us .photo img {
+    #about-us .photo img {
         max-width: 100%;
     }
 
-    .about-us .photo i {
+    #about-us .photo i {
         font-size: 10vw;
         left: 75%;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .about-us .container {
+    #about-us .container {
         width: 75%;
         flex-direction: row;
     }
 
-    .about-us .photo i {
+    #about-us .photo i {
         font-size: clamp(80px, 8vw ,120px);
     }
 
