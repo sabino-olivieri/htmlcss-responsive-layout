@@ -186,7 +186,6 @@ header nav {
 
 .blue-card {
     margin-top: var(--header-height);
-
 }
 
 .blue-card .col span {
@@ -199,8 +198,11 @@ header nav {
     gap: calc(var(--gap-flex) * 2);
 }
 
+.blue-card .big-card .flex {
+    align-items: flex-end;
+}
+
 .blue-card .big-card img {
-    max-width: 300px;
     width: 100%;
 }
 
